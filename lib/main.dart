@@ -8,90 +8,120 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.teal.shade900,
-          title: Text('Flutter Application',
-          style: TextStyle(
-              fontSize: 30.0,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-              fontFamily: 'Pacifico'
-           ),
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            elevation: 0,
+            backgroundColor: Colors.teal.shade900,
+            title: Text('Flutter Application',
+            style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontFamily: 'Pacifico'
+             ),
+            ),
           ),
-        ),
-        backgroundColor: Colors.teal,
-        body: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              CircleAvatar(
-                radius: 50.0,
-                backgroundImage: AssetImage('images/ava.png'),
-              ),
-              Text(
-                "User Name",
-                style: TextStyle(
-                  fontFamily: 'Pacifico',
-                  fontSize: 40.0,
+          backgroundColor: Colors.teal,
+          body: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                CircleAvatar(
+                  radius: 50.0,
+                  backgroundImage: AssetImage('images/ava.png'),
+                ),
+                Text(
+                  "User Name",
+                  style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 40.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  "FLUTTER DEVELOPER",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.teal.shade100,
+                    fontSize: 20.0,
+                    letterSpacing: 2.5,
+                    fontFamily: 'Source Sans Pro'
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                  width: 150.0,
+                  child: Divider(
+                    color: Colors.teal.shade100,
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.all(25.0),
                   color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                "FLUTTER DEVELOPER",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.teal.shade100,
-                  fontSize: 20.0,
-                  letterSpacing: 2.5,
-                  fontFamily: 'Source Sans Pro'
-                ),
-              ),
-              SizedBox(
-                height: 20.0,
-                width: 150.0,
-                child: Divider(
-                  color: Colors.teal.shade100,
-                ),
-              ),
-              Card(
-                margin: EdgeInsets.all(25.0),
-                color: Colors.white,
-                child: ListTile(
-                  leading: Icon(
-                    Icons.phone,
-                    color: Colors.teal,
-                  ),
-                  title: Text(
-                    "+92 3453606146",
-                    style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontSize: 20.0,
-                        fontFamily: 'Source Sans Pro'
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      "+92 3453606146",
+                      style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontSize: 20.0,
+                          fontFamily: 'Source Sans Pro'
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Card(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(horizontal: 25.0),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.email,
-                    color: Colors.teal,
-                  ),
-                  title: Text(
-                    "user@gmail.com",
-                    style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 20.0
+                Card(
+                  color: Colors.white,
+                  margin: EdgeInsets.symmetric(horizontal: 25.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      "user@gmail.com",
+                      style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontFamily: 'Source Sans Pro',
+                          fontSize: 20.0
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
+          ),
+          floatingActionButton: FloatingActionButton(
+            onPressed: (){},
+            focusColor: Colors.white,
+            backgroundColor: Colors.white,
+            child: Icon(Icons.add,color: Colors.teal.shade900,),
+          ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+          bottomNavigationBar: BottomAppBar(
+            color: Colors.white,
+            shape: CircularNotchedRectangle(),
+            elevation: 0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal:20.0,vertical: 10.0),
+                  child: Icon(Icons.arrow_back,
+                  color: Colors.teal.shade900,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal:20.0,vertical: 10.0),
+                  child: Icon(Icons.arrow_forward,
+                  color: Colors.teal.shade900,),
+                )
+              ],
+            ),
           ),
         ),
       ),
@@ -141,4 +171,6 @@ class MyApp extends StatelessWidget {
 //    );
 //  }
 //}
+
+
 
